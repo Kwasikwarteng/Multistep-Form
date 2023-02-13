@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Form</title>
+    <link
+      rel="stylesheet"
+      href="style.css
+    "
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form action="#" class="form">
+      <!-- Form 1 -->
+      <h3>Register</h3>
+      <!-- Progress Bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active" data-title="NAME"></div>
+        <div class="progress-step" data-title="CONTACT DETAILS"></div>
+        <div class="progress-step" data-title="ADDRESS"></div>
+        <div class="progress-step" data-title="PASSWORD"></div>
+      </div>
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="FirstName"><b>First Name</b></label>
+
+          <input
+            type="text"
+            name="FirstName"
+            id="FirstName"
+            placeholder="Enter first name"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="LastName"><b>Last Name</b></label>
+          <input
+            type="text"
+            name="LastName"
+            id="LastName"
+            placeholder="Enter last name"
+          />
+        </div>
+
+        <a href="#" class="btn btn-next">Next</a>
+      </div>
+
+      <!-- Form 2 -->
+      <div class="form-step">
+        <div class="input-group">
+          <label for="phone"><b>Phone Number</b></label>
+          <input
+            type="tel"
+            name="number"
+            id="number"
+            placeholder="+233 000000"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="email"><b>Email</b></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@email.com"
+          />
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <!-- Form 3 -->
+      <div class="form-step">
+        <div class="input-group">
+          <label for="address"><b>Address</b></label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Enter address"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="zip"><b>Zip Code</b></label>
+          <input type="text" name="zip" id="zip" placeholder="Zip Code" />
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <!-- Form 4 -->
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password"><b>Password</b></label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <div class="input-group">
+          <label for="confirmPassword"><b>Confirm Password</b></label>
+          <input type="password" name="confirmPassword" id="confirmPassword" />
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

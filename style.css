@@ -1,0 +1,158 @@
+:root{
+    --primary-color: #05d6f2;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    
+}
+
+/* Global Styles */
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+h3{
+    text-align: center;
+    color: var(--primary-color);
+
+}
+.imageDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Form*/
+.form{
+    width: clamp(750px, 30%, 430px);
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    background-color: rgb(242, 224, 224);
+    z-index: 0;
+}
+
+
+.input-group{
+    margin: 2rem 0;
+}
+
+.form-step{
+    display: none;
+}
+
+.form-step-active{
+    display: block;
+}
+
+/*Button*/
+.btn-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.btn{
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+   
+}
+
+/* Progress Bar */
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 3rem 0 4rem;
+}
+
+.progressbar::before, .progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: lightgray;
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: .3s;
+}
+
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    font-size: .65rem;  
+}
+
+.progress-step{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+    
+}
+
+.progress-step-active{
+    background-color: var(--primary-color);
+    
+}
+
+.customModalContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.afrakoma{
+     height: 200px;
+    width: 150px;
+}
+
+.customModalContent h4{
+    color: var(--primary-color);
+}
+
